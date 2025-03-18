@@ -55,6 +55,7 @@ body {
 .nav-links {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -67,6 +68,41 @@ body {
 
 .nav-links a:hover {
     background-color: var(--secondary-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    width: 200px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: auto;
+}
+
+.search-bar button:hover {
+    color: var(--secondary-color);
 }
 
 /* Auth Forms */
@@ -350,19 +386,117 @@ button:hover {
     border: 2px solid var(--primary-color);
 }
 
+/* Your Videos Page */
+.no-videos {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.no-videos p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.video-thumbnail-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-card:hover .video-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.delete-form {
+    margin-top: 1rem;
+}
+
+.delete-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Active Nav Link */
+.nav-links a.active {
+    background-color: var(--secondary-color);
+}
+
 /* Responsive Improvements */
 @media (max-width: 768px) {
     .video-stats {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .reaction-form {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .comment-header {
         flex-wrap: wrap;
+    }
+    
+    .video-stats span {
+        font-size: 0.9rem;
+    }
+    
+    .delete-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-bar {
+        display: none;
     }
 } 

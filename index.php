@@ -29,8 +29,13 @@ $videos = $stmt->fetchAll();
     <nav class="navbar">
         <a href="index.php" class="navbar-brand">YourHub</a>
         <div class="nav-links">
+            <a href="index.php" class="active">Home</a>
             <a href="upload.php">Upload Video</a>
-            <a href="profile.php">Profile</a>
+            <a href="your_videos.php">Your Videos</a>
+            <form class="search-bar" action="search.php" method="GET">
+                <input type="text" name="q" placeholder="Search videos..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
             <a href="logout.php">Logout</a>
         </div>
     </nav>
