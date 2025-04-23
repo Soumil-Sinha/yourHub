@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-
+//FInal Update done
 // Fetch videos with user info and view counts
 $stmt = $pdo->query("SELECT v.*, u.username, u.profile_picture, 
     (SELECT COUNT(*) FROM likes WHERE video_id = v.id AND type = 'like') as like_count,
