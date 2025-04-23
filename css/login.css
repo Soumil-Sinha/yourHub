@@ -1,0 +1,146 @@
+/* Full black background */
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #6611d5;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.formInput{
+    background-color:rgb(25, 25, 25);
+}
+
+
+.gradient-section {
+    position: absolute;
+    margin: 20px; /* 20px margin on bottom */
+    width: 50%;
+    max-height: calc(100vh - 40px); /* 100% height minus top & bottom margins */
+    border-radius: 20px;
+    background: linear-gradient(to bottom,  #6611d5, #e7c8f5);
+    overflow: hidden;
+}
+
+.right-section{
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Form box (fully black background) */
+.auth-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* Fully black */
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    width: 90%;
+    height: 100%;
+}
+
+.inner-container{
+    height: 70%;
+    width: 90%;
+}
+
+.inner-container p{
+    margin-top: 20px;
+}
+
+#login-heading{
+  margin-bottom: 60px;
+  font-size: 4rem;
+}
+/* Center the form container */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: fit-content; /* Full height */
+    width:100%;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px; /* Prevents inputs from stretching too wide */
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Input styling */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem; /* Increased font size */
+    outline: none; /* Remove focus outline */
+}
+
+/* Placeholder styling */
+input::placeholder {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #6611d5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px; /* Space above the button */
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: #6a0dad;
+    
+}

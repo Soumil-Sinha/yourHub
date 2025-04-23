@@ -1,0 +1,148 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #6611d5;
+}
+
+/* Remove focus outline */
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Input field background */
+.formInput {
+    background-color: rgb(25, 25, 25);
+}
+
+/* Left gradient section */
+.gradient-section {
+    position: absolute;
+    margin: 20px; /* 20px margin on bottom */
+    width: 50%;
+    max-height: calc(100vh - 40px); /* 100% height minus top & bottom margins */
+    border-radius: 20px;
+    background: linear-gradient(to bottom,  #6611d5, #e7c8f5);
+    overflow: hidden;
+}
+
+/* Right form section */
+.right-section {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Registration Form Box */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    width: 90%;
+    height: 100%;
+}
+
+.inner-container {
+    height: 85%;
+    width: 90%;
+}
+
+.inner-container p {
+    margin-top: 20px;
+}
+
+/* Register heading */
+#register-heading {
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+/* Center the form container */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input styling */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #6611d5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: #6a0dad;
+}
